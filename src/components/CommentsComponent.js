@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 class Comments extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      selectedDish: null
-    };
-
     console.log("Comment component constructor is invoked");
   }
 
