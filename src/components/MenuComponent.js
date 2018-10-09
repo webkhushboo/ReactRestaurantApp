@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay,CardTitle } from 'reactstrap';
-import DishDetail from './DishdetailComponent'
+import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
+import DishDetail from './DishdetailComponent';
+import Comments from '../components/CommentsComponent'
 
 class Menu extends Component {
   constructor(props) {
@@ -11,15 +12,15 @@ class Menu extends Component {
 
     console.log("Menu component constructor is invoked");
   }
-  
-  componentDidMount(){
+
+  componentDidMount() {
     console.log("Menu component componentDidMount is invoked");
   }
   onDishSelect(dish) {
     this.setState({ selectedDish: dish });
   }
 
-  
+
 
   render() {
     const menu = this.props.dishes.map((dish) => {
@@ -41,13 +42,18 @@ class Menu extends Component {
           {menu}
         </div>
         <div className="row">
-        <DishDetail selectedDish={this.state.selectedDish}></DishDetail>
+          <div className="col-md-5 m-1">
+            <DishDetail selectedDish={this.state.selectedDish}></DishDetail>
+          </div>
+          <div className="col-md-5 m-1">
+            <Comments comments={this.state.selectedDish}> </Comments>
+          </div>
         </div>
       </div>
     );
-    
+
   }
-  
+
 }
 
 export default Menu

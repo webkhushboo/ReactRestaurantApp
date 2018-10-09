@@ -25,7 +25,7 @@ class DishDetail extends Component {
     render() {
         return (
             <div className="row">
-                <div className="col-12 col-md-5 m-1">
+                <div className="col-12">
                      {this.renderDish(this.props.selectedDish)}
                 </div>
             </div>
