@@ -41,7 +41,7 @@ class Main extends Component {
             </div>
             <div className="col-12 col-md-5 m-1">
               <Comments
-                comments={
+                dish={
                   this.state.dishes.filter(
                     dish => dish.id === this.state.selectedDish
                   )[0]
