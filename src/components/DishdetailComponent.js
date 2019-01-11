@@ -42,9 +42,11 @@ const DishDetail = props => {
       </div>
       <div className="row">
         <div className="col-6">
+          <h1> {props.dish.name}</h1>
           <RenderDish dish={props.dish} />
         </div>
         <div className="col-6">
+          <h1> Comments</h1>
           <Comments comments={props.comments} />
         </div>
       </div>
