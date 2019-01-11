@@ -19,13 +19,11 @@ function RenderComments({ comment }) {
 }
 
 const Comments = props => {
-  if (props.dish) {
-    const comments = props.dish.comments.map(comment => {
+  if (props.comments.length > 0) {
+    const comments = props.comments.map(comment => {
       return (
-        <div className="row">
-          <div className="col-12">
-            <RenderComments comment={comment} />
-          </div>
+        <div className="col-12" key={comment.id}>
+          <RenderComments comment={comment} />
         </div>
       );
     });
