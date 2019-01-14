@@ -34,3 +34,16 @@ address {
 .navbar-dark {
   background-color: #512da8;
 }
+
+.image {
+  width: 96px;
+  height: 96px;
+}
+
+.aboutus-list {
+  margin-left: 10px;
+}
+
+.about-list-item {
+  margin-top: 50px;
+}
