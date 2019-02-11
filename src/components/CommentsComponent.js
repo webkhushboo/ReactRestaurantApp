@@ -33,7 +33,7 @@ class Comment extends Component {
 
   handleSubmitComments(values) {
     console.log("Current state is :" + JSON.stringify(values));
-    alert(console.log("Current state is :" + JSON.stringify(values)));
+    this.props.addComment(this.props.dishId, values.rating, values.name, values.comments);
   }
 
   render() {
@@ -57,7 +57,7 @@ class Comment extends Component {
                 Submit Comment
               </ModalHeader>
               <ModalBody>
-                <LocalForm onSubmit={values => this.handleSubmit(values)}>
+                <LocalForm onSubmit={values => this.handleSubmitComments(values)}>
                   <Row className="form-group">
                     <Label htmlFor="rating" md={12}>
                       Rating
